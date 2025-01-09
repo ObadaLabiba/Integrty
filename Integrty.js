@@ -2,7 +2,6 @@
   const fs = require('fs').promises;
   const crypto = require('crypto');
   const axios = require('axios');
-  const path = require('path');
 
   async function calculateIntegrityValue(input) {
     let fileContent;
@@ -31,8 +30,8 @@
   }
 
   try {
-    const scriptUrl = '../Labiba Bundle/absher_business_ar/build/static/js/bundle-Absher-Business.js';
-    const scriptUrlEn = '../Labiba Bundle/absher_business_en/build/static/js/bundle-Absher-Business-en.js';
+    const scriptUrl = 'https://abshersa2.labibabot.com/static/js/bundle-Absher-BusinessTest.js';
+    const scriptUrlEn = 'https://abshersa2.labibabot.com/static/js/bundle-Absher-Business-enTest.js';
 
     const integrity = await calculateIntegrityValue(scriptUrl);
     const integrityEn = await calculateIntegrityValue(scriptUrlEn);
